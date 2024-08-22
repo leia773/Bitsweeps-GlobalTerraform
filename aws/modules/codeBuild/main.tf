@@ -26,6 +26,16 @@ data "aws_iam_policy_document" "codebuild_permission_policy" {
 
   statement {
     effect = "Allow"
+    actions = [
+      "codestar-connections:GetConnection",
+      "codeconnections:*",
+      "codestar:*"
+    ]
+    resources = ["*"]
+  }
+
+  statement {
+    effect = "Allow"
 
     actions = [
       "logs:CreateLogGroup",

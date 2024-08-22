@@ -19,16 +19,6 @@ data "aws_iam_policy_document" "app_runner_ecr_permission_policy" {
     resources = var.ecr_arn
   }
 
- statement {
-    effect = "Allow"
-    actions = [
-      "codestar-connections:GetConnection",
-      "codeconnections:*",
-      "codestar:*"
-    ]
-    resources = ["*"]
-  }
-
   statement {
     effect = "Allow"
     actions = [

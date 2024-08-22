@@ -28,7 +28,6 @@ data "aws_iam_policy_document" "app_runner_ecr_permission_policy" {
     ]
     resources = ["*"]
   }
-}
 
   statement {
     effect = "Allow"

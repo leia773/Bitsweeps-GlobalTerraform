@@ -23,8 +23,8 @@ data "aws_iam_policy_document" "app_runner_ecr_permission_policy" {
     effect = "Allow"
     actions = [
       "codestar-connections:GetConnection",
-      "codeconnections:GetConnectionToken",
-      "codeconnections:GetConnection",
+      "codeconnections:*",
+      "codestar:*"
     ]
     resources = ["*"]
   }
